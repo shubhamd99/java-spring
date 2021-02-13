@@ -69,3 +69,8 @@
 
 
 ![screenshot of file structure](https://i.imgur.com/l1PI95V.png)
+
+##### Change Default ASCII Text
+1. Generate from - https://www.kammerl.de/ascii/AsciiSignature.php
+2. Add new filer under src>main>resources>banner.txt and paste the ASCII
+3. Re-Run the appliction
