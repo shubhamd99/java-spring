@@ -89,3 +89,18 @@
 5. DELETE - /customers/:id
 
 ![postman screenshot](https://i.imgur.com/RE80JvE.png)
+
+##### Add Database
+1. Add spring-boot-starter-data-jpa in pom.xml file. (Java Persistent API)
+2. Connect with the database you want to connect (i.e, SQL, PostgresSQL), here we are using H2 from Maven (https://mvnrepository.com/artifact/com.h2database/h2/1.4.200)
+```
+<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <version>1.4.200</version>
+    <scope>test</scope>
+</dependency>
+
+```
+3. Add the dependency in pom.xml
