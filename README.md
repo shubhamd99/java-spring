@@ -70,7 +70,20 @@
 
 ![screenshot of file structure](https://i.imgur.com/l1PI95V.png)
 
+##### Shorcuts to create Constructor, Getters and Setters etc.
+1. Right Click and select Generate
+2. Select anything you want to create in the class
+
+![shortcuts generate](https://i.imgur.com/pmpgrSp.png)
+
 ##### Change Default ASCII Text
 1. Generate from - https://www.kammerl.de/ascii/AsciiSignature.php
 2. Add new filer under src>main>resources>banner.txt and paste the ASCII
 3. Re-Run the appliction
+
+##### Customer Application APIs
+1. GET - /customers
+2. GET - /customers/:id
+3. POST - /customers
+4. PUT - /customers/:id
+5. DELETE - /customers/:id
