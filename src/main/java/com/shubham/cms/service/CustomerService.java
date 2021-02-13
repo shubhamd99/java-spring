@@ -46,7 +46,7 @@ public class CustomerService {
                     if (c.getCustomerId() == customerId) {
                         c.setCustomerFirstName(customer.getCustomerFirstName());
                         c.setCustomerLastName(customer.getCustomerLastName());
-                        c.setCustomerId(customer.getCustomerId());
+                        c.setCustomerEmail(customer.getCustomerEmail());
                     }
                 });
 
@@ -57,7 +57,7 @@ public class CustomerService {
                 .get();
     }
 
-    private void deleteCustomer(int customerId) {
+    public void deleteCustomer(int customerId) {
         customerList
                 .forEach(c -> {
                     if (c.getCustomerId() == customerId) {
