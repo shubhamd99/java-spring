@@ -1,12 +1,17 @@
+// The service layer is there to provide logic to operate on the data sent to and from the DAO (Data Access Object) and the client.
+
 package com.shubham.cms.service;
 
 import com.shubham.cms.model.Customer;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-// The service layer is there to provide logic to operate on the data sent to and from the DAO (Data Access Object) and the client.
-
+// Spring Component annotation (@Component) is used to denote a class as Component.
+//  It means that Spring framework will autodetect these classes for dependency injection when annotation-based configuration and
+// classpath scanning is used.
+@Component
 public class CustomerService {
 
     private int customerIdCount = 1;

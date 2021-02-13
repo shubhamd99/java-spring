@@ -87,3 +87,5 @@
 3. POST - /customers
 4. PUT - /customers/:id
 5. DELETE - /customers/:id
+
+![postman screenshot](https://i.imgur.com/RE80JvE.png)
