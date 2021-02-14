@@ -3,11 +3,13 @@
 package com.shubham.cms.service;
 
 import com.shubham.cms.dao.CustomerDAO;
+import com.shubham.cms.exception.CustomerNotFoundException;
 import com.shubham.cms.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 // Spring Component annotation (@Component) is used to denote a class as Component.
@@ -53,7 +55,11 @@ public class CustomerService {
         //        .get();
 
         // DB Operations
-        return customerDAO.findById(customerId).get();
+        Optional<Customer> optionalCustomer = customerDAO.findById(customerId);
+        if (!optionalCustomer.isPresent()) {
+            throw new CustomerNotFoundException("Customer Record is not available...");
+        }
+        return optionalCustomer.get();
     }
 
     public Customer updateCustomer(int customerId, Customer customer) {
