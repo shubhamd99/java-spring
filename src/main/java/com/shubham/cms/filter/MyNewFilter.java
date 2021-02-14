@@ -1,6 +1,5 @@
 package com.shubham.cms.filter;
 
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
@@ -10,12 +9,11 @@ import java.io.IOException;
 //  It means that Spring framework will autodetect these classes for dependency injection when annotation-based configuration and
 // classpath scanning is used.
 @Component
-@Order(1)
-public class MyFilter_1 implements Filter {
+public class MyNewFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("Filter 1 is called");
+        System.out.println("The new filter is called...");
         filterChain.doFilter(servletRequest, servletResponse);
     }
 }
