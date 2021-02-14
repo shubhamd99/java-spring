@@ -104,3 +104,19 @@
 
 ```
 3. Add the dependency in pom.xml
+
+##### Securing the Boot Application
+1. Add the below on Pom.xml
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+```
+2. Now everytime when we try to access localhost:8080, login page will come
+```
+username: user
+password: <Enter the password that was generated and shown in the terminal>
+```
+
+![accessing api using auth](https://i.imgur.com/6D5kPiP.png)
